@@ -9,9 +9,10 @@
 
 <template>
     <section class="single-card">
-        <img src="" alt="card">
+        <img :src="singleCard.card_images[0].image_url_small" alt="card">
         <h4>{{ singleCard.name }}</h4>
-        <p>{{ singleCard.archetype }}</p>
+        <p v-if="singleCard.archetype">{{ singleCard.archetype }}</p>
+        <p v-else>{{ singleCard.type }}</p>
     </section>
 </template>
 
@@ -21,8 +22,24 @@
             margin: 10px 5px;
             width: calc((100% / 5) - 10px);
             background-color: $primary-color;
-            height: 400px;
+            max-height: 600px;
             text-align: center;
+            *{
+                margin-bottom: 20px;
+            }
+            img{
+                width: 100%;
+                max-height: 500px;
+            }
+            h4{
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 20px;
+            }
         }
 
 </style>
