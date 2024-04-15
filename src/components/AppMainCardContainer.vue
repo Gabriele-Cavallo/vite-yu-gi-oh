@@ -1,6 +1,10 @@
 <script>
+    import SingleCard from './SingleCard.vue';
     export default{
-        name: 'AppMainCardContainer'
+        name: 'AppMainCardContainer',
+        components: {
+            SingleCard,
+        }
         
     }
 </script>
@@ -8,7 +12,7 @@
 <template>
     <section class="card-container d-flex jst-cntr">
         <div class="card-wrapper d-flex d-wrap">
-            
+            <SingleCard></SingleCard>
         </div>
     </section>
 </template>
