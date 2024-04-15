@@ -1,9 +1,15 @@
 <script>
+    import { store } from '../store.js';
     import SingleCard from './SingleCard.vue';
     export default{
         name: 'AppMainCardContainer',
         components: {
             SingleCard,
+        },
+        data() {
+            return {
+                store,
+            };
         }
         
     }
@@ -12,7 +18,7 @@
 <template>
     <section class="card-container d-flex jst-cntr">
         <div class="card-wrapper d-flex d-wrap">
-            <SingleCard></SingleCard>
+            <SingleCard v-for="card in store.cardsList" :singleCard = "card"></SingleCard>
         </div>
     </section>
 </template>

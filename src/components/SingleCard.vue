@@ -1,14 +1,17 @@
 <script>
     export default{
-        name: 'SingleCard'
+        name: 'SingleCard',
+        props:{
+            singleCard: Object,
+        }
     }
 </script>
 
 <template>
     <section class="single-card">
         <img src="" alt="card">
-        <h4>[card-name]</h4>
-        <p>[card-archetype]</p>
+        <h4>{{ singleCard.name }}</h4>
+        <p>{{ singleCard.archetype }}</p>
     </section>
 </template>
 
