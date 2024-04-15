@@ -19,7 +19,7 @@
 <style scoped lang="scss">
 @use '../style/partials/variables' as *;
 .single-card{
-            margin: 10px 5px;
+            margin: 0 5px 10px;
             width: calc((100% / 5) - 10px);
             background-color: $primary-color;
             max-height: 600px;
