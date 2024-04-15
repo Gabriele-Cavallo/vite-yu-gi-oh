@@ -1,12 +1,14 @@
 <script>
+    import AppHeader from './components/AppHeader.vue';
     export default{
         components: {
+            AppHeader
         }
     }
 </script>
 
 <template>
-    <h1 class="d-flex jst-cntr">ciao sono un titolo</h1>
+    <AppHeader></AppHeader>
 </template>
 
 <style  lang="scss">
