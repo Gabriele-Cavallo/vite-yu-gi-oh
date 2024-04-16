@@ -8,6 +8,8 @@
 </script>
 
 <template>
+    <!-- Singolo componente card che popola il contenuto tramite il 
+        passagio di dati dalla prop singleCard -->
     <section class="single-card">
         <img :src="singleCard.card_images[0].image_url_small" :alt="singleCard.name">
         <h4>{{ singleCard.name }}</h4>

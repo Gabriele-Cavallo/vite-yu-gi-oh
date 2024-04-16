@@ -12,6 +12,8 @@ export default{
 </script>
 
 <template>
+    <!-- Componente che mostra a schermo la Select tramite cui impostare l'archetipo ed 
+        emette la selezione avvenuta ad App.vue -->
     <section class="archetype-filter">
         <label for="archetype-select">Scegli l'archetipo</label>
         <select @change="$emit('filterCards')" v-model="store.filteredArchetype" id="archetype-select">

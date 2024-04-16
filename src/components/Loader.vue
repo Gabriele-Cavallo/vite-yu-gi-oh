@@ -5,6 +5,8 @@
 </script>
 
 <template>
+    <!-- Componente mostrato a schermo in attesa che tutte le card siano state 
+        scaricate dell'API regolato dalla variabile loading in store.js -->
     <h2>LOADING....</h2>
 </template>
 

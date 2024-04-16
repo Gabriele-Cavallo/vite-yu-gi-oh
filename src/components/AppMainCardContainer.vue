@@ -21,12 +21,17 @@
 </script>
 
 <template>
+    <!-- Componente dentro il quale richiamo i componenti SearchedCount,Loader e SingleCard 
+        che popolano il main della pagina -->
     <section class="card-container d-flex flex-col jst-cntr algn-cntr">
         <div class="card-wrapper d-flex d-wrap">
             <div class="top-banner">
                 <SearchedCount></SearchedCount>
                 <Loader v-if="!store.loading"></Loader>
             </div>
+            <!-- Genero una card per ogni carta contenuta nell'array cardsList dello store.js. Array che viene popolato al 
+                caricamento della pagina con una richiesta API di default e successivamente da altre chiamate API fatte 
+                partire tramite la selezione di un archetipo -->
             <SingleCard v-for="card in store.cardsList" :key="card.id" :singleCard = "card"></SingleCard>
         </div>
     </section>

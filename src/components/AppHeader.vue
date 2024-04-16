@@ -6,6 +6,7 @@
 
 <template>
     <header>
+        <!-- Sezione header che contiene logo e titolo -->
         <div class="title d-flex algn-cntr">
             <img src="../assets/img/yugioh-logo.png" alt="logo">
             <h1>Yu-Gi-Oh Api</h1>
