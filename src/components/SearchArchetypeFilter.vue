@@ -15,7 +15,7 @@ export default{
     <section class="archetype-filter">
         <label for="archetype-select">Scegli l'archetipo</label>
         <select @change="$emit('filterCards')" v-model="store.filteredArchetype" id="archetype-select">
-            <option value="default"></option>
+            <option value="">Selezionare l'archetipo</option>
             <option v-for="archetype in store.searchedArchetype" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
         </select>
     </section>

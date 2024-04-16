@@ -22,7 +22,15 @@
                     num: 20,
                     offset: 0,
                 };
-                if(store.filteredArchetype !== '') {
+                if(store.filteredArchetype === '') {
+                    axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
+                    params: queryParams
+                    })
+                    .then ((response) => {
+                        this.store.cardsList = response.data.data;
+                        this.store.loading = true;
+                    });
+                }else if(store.filteredArchetype !== ''){
                     queryParams.archetype = store.filteredArchetype;
                 }
                 axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
@@ -32,6 +40,9 @@
                     store.cardsList = response.data.data;
                     store.loading = true;
                 });
+                // if(store.filteredArchetype === 'default'){
+                //     this.getArchetypeApi;
+                // }
             },
             getArchetypeApi(){
                 axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
