@@ -22,6 +22,9 @@
                     num: 20,
                     offset: 0,
                 };
+                if(store.filteredArchetype !== '') {
+                    queryParams.archetype = store.filteredArchetype;
+                }
                 axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
                     params: queryParams
                 })
@@ -48,7 +51,7 @@
 <template>
     <AppHeader></AppHeader>
     <main>
-        <SearchArchetypeFilter></SearchArchetypeFilter>
+        <SearchArchetypeFilter @filterCards="getCardApi"></SearchArchetypeFilter>
         <AppMainCardContainer></AppMainCardContainer>
     </main>
 </template>
