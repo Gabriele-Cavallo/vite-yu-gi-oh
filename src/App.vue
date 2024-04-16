@@ -37,7 +37,6 @@
                 axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
                 .then((response) => {
                     store.searchedArchetype = response.data;
-                    console.log('archetype' , response.data);
                 })
             }
         },

@@ -2,11 +2,14 @@
     import { store } from '../store.js';
     import Loader from './Loader.vue'
     import SingleCard from './SingleCard.vue';
+    import SearchedCount from './SearchedCount.vue';
+
     export default{
         name: 'AppMainCardContainer',
         components: {
             SingleCard,
-            Loader
+            Loader,
+            SearchedCount,
         },
         data() {
             return {
@@ -18,9 +21,10 @@
 </script>
 
 <template>
-    <section class="card-container d-flex jst-cntr">
+    <section class="card-container d-flex flex-col jst-cntr algn-cntr">
         <div class="card-wrapper d-flex d-wrap">
             <div class="top-banner">
+                <SearchedCount></SearchedCount>
                 <Loader v-if="!store.loading"></Loader>
             </div>
             <SingleCard v-for="card in store.cardsList" :key="card.id" :singleCard = "card"></SingleCard>
@@ -41,7 +45,7 @@ section{
         padding: 40px 20px;
         .top-banner{
             width: calc(100% - 10px);
-            padding: 50px 0;
+            padding: 30px 0;
             background-color: black;
             margin: 0 5px;
         }
