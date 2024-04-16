@@ -5,11 +5,11 @@
 </script>
 
 <template>
-    <h1>LOADING....</h1>
+    <h2>LOADING....</h2>
 </template>
 
 <style scoper lang="scss">
-h1{
+h2{
     color: white;
     font-weight: bold;
     font-size: 35px;

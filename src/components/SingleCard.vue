@@ -9,7 +9,7 @@
 
 <template>
     <section class="single-card">
-        <img :src="singleCard.card_images[0].image_url_small" alt="card">
+        <img :src="singleCard.card_images[0].image_url_small" :alt="singleCard.name">
         <h4>{{ singleCard.name }}</h4>
         <p v-if="singleCard.archetype">{{ singleCard.archetype }}</p>
         <p v-else>{{ singleCard.type }}</p>
